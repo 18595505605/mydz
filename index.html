@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			li{
+				list-style: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			header{
+				width: 1300px;
+				height: 560px;
+				position: relative;
+				margin: 0 auto;
+			}
+			.lunbo{
+				width: 1300px;
+				height: 560px;
+				position: relative;
+			}
+			.lunbo>li{
+				width: 1300px;
+				height: 560px;
+				position: absolute;
+				float: left;
+			}
+			.lunbo>li>img{
+				width: 1300px;
+				height: 560px;
+			}
+			header>.left-1{
+				width: 60px;
+				height: 60px;
+				border-radius:50% ;
+				background: grey;
+				position: absolute;
+				font-size: 40px;
+				text-align: center;
+				line-height: 55px;
+				top: 250px;
+				left: 100px;
+				cursor: pointer;
+				display: none;
+			}
+			header>.right-1{
+				width: 60px;
+				height: 60px;
+				border-radius:50% ;
+				background: grey;
+				position: absolute;
+				font-size: 40px;
+				text-align: center;
+				line-height: 55px;
+				top: 250px;
+				right: 100px;
+				cursor: pointer;
+				display: none;
+			}
+			header>.dian{
+				width: 100px;
+				height: 30px;
+				position: absolute;
+				left: 150px;
+				top: 400px;
+			}
+			header>.dian>li{
+				width: 8px;
+				height: 8px;
+				border: 2px solid white;
+				border-radius:50% ;
+				float: left;
+				margin-left: 10px;
+				cursor: pointer;
+			}
+			.in{
+				background: white;
+			}
+			header>nav{
+				width: 1100px;
+				height: 50px;
+				position: absolute;
+				left: 100px;
+				top: 20px;
+			}
+			nav>.left{
+				float: left;
+			}
+			nav>.right{
+				float: right;
+			}
+			nav>.right>ul>li{
+				float: left;
+				font-size: 15px;
+				color: white;
+				line-height: 40px;
+				margin-left: 20px;
+				font-weight:bold ;
+				cursor: pointer;
+				text-align: center;
+			}
+			nav>.right>ul>li:hover{
+				border-top:2px solid white ;
+			}
+			nav>.right>ul>li>ul{
+				display: none;
+			}
+			nav>.right>ul>li:hover>ul{
+				display: block;
+			}
+			header>.bo{
+				width: 1100px;
+				height: 130px;
+				background: white;
+				margin-left: 100px;
+				position: absolute;
+				top:455px;
+				border-radius:10px ;
+				box-shadow: 0px 4px 5px gainsboro;
+			}
+			.bo>ul{
+				padding: 20px 20px;
+			}
+			.bo>ul>li{
+				cursor: pointer;
+				float: left;
+				margin-left: 20px;
+				font-size: 18px;
+				color: gray;
+			}
+			.a1{
+				font-weight:bold ;
+				border-bottom:2px solid gray ;
+			}
+			.gn>input{
+				border: 0px;
+				background: transparent;
+				font-size: 18px;
+				font-weight: bold;
+				color: gray;
+				line-height: 50px;
+				outline: none;
+			}
+			.gn>select{
+				border:none;
+				outline: none;
+				background: transparent;
+				font-size: 17px;
+				font-weight: bold;
+				color: gray;
+			}
+			.rm{
+				display: none;
+			}
+			.rm>li{
+				float: left;
+				padding: 15px 20px;
+			}
+			.rm>li>ul{
+				position: absolute;
+				margin-top: 20px;
+			}
+			.rm>li>ul>li{
+				float: left;
+				padding: 10px 15px;
+				font-size: 15px;
+				cursor: pointer;
+				display: block;
+			}
+			.rm>li>ul>li:hover{
+				color: forestgreen;
+			}
+			.a2{
+				border-bottom:2px solid forestgreen ;
+			}
+			#left-t{
+				width: 127px;
+				height: 127px;
+				position: fixed;
+				left: 0px;
+				bottom: 50px;
+				z-index: 999;
+			}
+			.section-1{
+				width: 1100px;
+				margin: 0 auto;
+				margin-top: 60px;
+				border-radius:10px ;
+			}
+			.section-1>.div-1{
+				width: 100%;
+				background: white;
+			}
+			.section-1>.div-1>.left{
+				float: left;
+			}
+			.section-1>.div-1>.right>.span-1{
+				font-weight:bold ;
+				font-size: 25px;
+				padding-left:10px;
+			}
+			.section-1>.div-1>.right>.span-2{
+				font-size: 16px;
+				padding-left:10px;
+				margin-top: 7px;
+				display: inline-block;
+				color: darkgrey;
+			}
+			.section-1>.div-2{
+				width: 48%;
+				/*height: 500px;*/
+				float: left;
+				border-radius:20px;
+				margin-top: 20px;
+			}
+			.section-1>.div-2>ul>li{
+				float: left;
+				overflow: hidden;
+				border-radius:20px ;
+				cursor: pointer;
+			}
+			.section-1>.div-2>ul>li>img{
+				width: 100%;
+				height: 100%;
+				border-radius:20px ;
+			}
+			.section-1>.div-2>ul>.li-1{
+				width: 100%;
+				height: 280px;
+			}
+			.section-1>.div-2>ul>.li-2,.li-3{
+				width: 48%;
+				height: 185px;
+			}
+			.section-1>.div-2>ul>li>img:hover{
+				transform:scale(1.05);
+				transition: all 1s; 
+			}
+			.section-1>.div-3{
+				width: 49%;
+				float: right;
+				border-radius:20px ;
+				margin-top: 20px;
+			}
+			.section-1>.div-3>ul>li{
+				float: left;
+				overflow: hidden;
+				border-radius:20px ;
+				cursor: pointer;
+			}
+			.section-1>.div-3>ul>li>img{
+				width: 100%;
+				height: 100%;
+				border-radius:20px ;
+			}
+			.section-1>.div-3>ul>.li-1{
+				width: 100%;
+				height: 280px;
+			}
+			.section-1>.div-3>ul>.li-2,.li-3{
+				width: 48%;
+				height: 185px;
+			}
+			.section-1>.div-3>ul>li>img:hover{
+				transform:scale(1.05);
+				transition: all 1s; 
+			}
+			.section-2{
+				width: 1100px;
+				margin: 0 auto;
+				margin-top: 45px;
+				border-radius:10px ;
+			}
+			.section-2>.div-1{
+				width: 100%;
+				background: white;
+			}
+			.section-2>.div-1>.left{
+				float: left;
+			}
+			.section-2>.div-1>.right>.span-1{
+				font-weight:bold ;
+				font-size: 25px;
+				padding-left:10px;
+			}
+			.section-2>.div-1>.right>.span-2{
+				font-size: 16px;
+				padding-left:10px;
+				margin-top: 7px;
+				display: inline-block;
+				color: darkgrey;
+			}
+			.section-2>.div-2{
+				width: 48%;
+				height: 380px;
+				float: left;
+				border-radius:20px;
+				margin-top: 20px;
+			}
+			.section-2>.div-2>ul>li{
+				width: 525px;
+				height: 380px;
+				float: left;
+				overflow: hidden;
+				border-radius:20px ;
+				cursor: pointer;
+			}
+			.section-2>.div-2>ul>li>img{
+				width: 525px;
+				height: 380px;
+				border-radius:20px ;
+			}
+			.section-2>.div-2>ul>li>img:hover{
+				transform:scale(1.05);
+				transition: all 1s; 
+			}
+			.section-2>.div-3{
+				width: 49%;
+				float: right;
+				border-radius:20px ;
+				margin-top: 20px;
+			}
+			.section-2>.div-3>ul>li{
+				float: left;
+				overflow: hidden;
+				border-radius:20px ;
+				cursor: pointer;
+			}
+			.section-2>.div-3>ul>li>img{
+				width: 100%;
+				height: 100%;
+				border-radius:20px ;
+			}
+			.section-2>.div-3>ul>.li-2,.li-3{
+				width: 48%;
+				height: 185px;
+			}
+			.section-2>.div-3>ul>li>img:hover{
+				transform:scale(1.05);
+				transition: all 1s; 
+			}
+			.section-3{
+				width: 1100px;
+				margin: 0 auto;
+				margin-top: 45px;
+				border-radius:10px ;
+			}
+			.section-3>.div-1{
+				width: 100%;
+				background: white;
+			}
+			.section-3>.div-1>.left{
+				float: left;
+			}
+			.section-3>.div-1>.right>.span-1{
+				font-weight:bold ;
+				font-size: 25px;
+				padding-left:10px;
+			}
+			.section-3>.div-1>.right>.span-2{
+				font-size: 16px;
+				padding-left:10px;
+				margin-top: 7px;
+				display: inline-block;
+				color: darkgrey;
+			}
+			.section-3>.div-2{
+				width: 100%;
+				float: left;
+				border-radius:20px;
+				margin-top: 20px;
+			}
+			.section-3>.div-2>ul>li{
+				width: 158px;
+				height: 220px;
+				float: left;
+				overflow: hidden;
+				border-radius:10px ;
+				position: relative;
+				cursor: pointer;
+			}
+			.section-3>.div-2>ul>li>p{
+				width: 100%;
+				height: 50px;
+				background: rgba(55,55,55,0.9);
+				position: absolute;
+				bottom: 0px;
+				color: white;
+				font-size: 14px;
+				line-height: 50px;
+			}
+			.section-3>.div-2>ul>li>img:hover{
+				transform:scale(1.05);
+				transition: all 1s; 
+			}
+			.section-3>.div-2>ul>li:nth-child(n+2){
+				margin-left: 30px;
+			}
+			.section-4{
+				width: 1100px;
+				margin: 0 auto;
+				margin-top: 65px;
+			}
+			.section-4>ul>li{
+				width: 25%;
+				float: left;
+				text-align: center;
+			}
+			.section-4>ul>li>p:first-of-type{
+				font-size: 19px;
+				margin-top: 8px;
+			}
+			.section-4>ul>li>p:last-child{
+				font-size: 15px;
+				color: gray;
+				margin-top: 4px;
+			}
+			.section-5{
+				width: 1100px;
+				height: 304px;
+				margin: 0 auto;
+				margin-top: 65px;
+				position: relative;
+				overflow: hidden;
+			}
+			.section-5>ul{
+				width:2200px;
+				height: 204px;
+				position: absolute;
+			}
+			.section-5>ul>li{
+				width: 1100px;
+				height: 204px;
+				float: left;
+			}
+			.section-5>ul>li>img{
+				width: 1100px;
+				height: 204px;
+			}
+			.section-5>.section-1{
+				width: 1100px;
+				height: 100px;
+				position: absolute;
+				bottom: 0px;
+				border-radius:0px ;
+			}
+			.section-5>.section-1>.left{
+				width: 550px;
+				height:100px;
+				float: left;
+				background:black;
+				background: url(img/lun-1.jpg)no-repeat;
+				background-size: 100%;
+				cursor: pointer;
+			}
+			.section-5>.section-1>.left>h2{
+				width: 100%;
+				height: 100%;
+				background: rgba(55,55,55,0.7);
+				line-height: 100px;
+				text-align: center;
+				color: white;
+			}
+			.section-5>.section-1>.right>h2{
+				width: 100%;
+				height: 100%;
+				background: rgba(55,55,55,0.7);
+				line-height: 100px;
+				text-align: center;
+				font-weight: bold;
+				font-size: 20px;
+				color: white;
+			}
+			.section-5>.section-1>.right{
+				width: 550px;
+				height: 100px;
+				float: left;
+				background:red;
+				background: url(img/lun-2.jpg)no-repeat;
+				background-size: 100%;
+				cursor: pointer;
+			}
+			.section-5>.zuo{
+				width: 40px;
+				height: 204px;
+				background: rgba(55,55,55,0.3);
+				font-size: 30px;
+				color: white;
+				position: absolute;
+				font-weight: bold;
+				line-height: 204px;
+				text-align: center;
+				display: none;
+			}
+			.section-5>.zuo:hover{
+				background: rgba(55,55,55,0.6);
+				cursor:pointer;
+			}
+			.section-5>.you:hover{
+				background: rgba(55,55,55,0.6);
+				cursor:pointer;
+			}
+			.section-5>.you{
+				width: 40px;
+				height: 204px;
+				background: rgba(55,55,55,0.3);
+				font-size: 30px;
+				color: white;
+				position: absolute;
+				right: 0px;
+				font-weight: bold;
+				line-height: 204px;
+				text-align: center;
+				display: none;
+			}
+			.a3{
+				margin-top: 100px;
+			}
+			.section-6{
+				width: 1100px;
+				margin: 0 auto;
+				margin-top: 50px;
+			}
+			.section-6>.div-1{
+				width: 100%;
+				background: white;
+			}
+			.section-6>.div-1>.left{
+				float: left;
+			}
+			.section-6>.div-1>.right>.span-1{
+				font-weight:bold ;
+				font-size: 25px;
+				padding-left:10px;
+			}
+			.section-6>.div-1>.right>.span-2{
+				font-size: 16px;
+				padding-left:10px;
+				margin-top: 7px;
+				display: inline-block;
+				color: darkgrey;
+			}
+			.section-6>.div-2{
+				width: 1100px;
+				height: 220px;
+				margin-top: 20px;
+				overflow: hidden;
+			}
+			.section-6>.div-2>ul>li{
+				width:348px;
+				height: 220px;
+				float: left;
+				border-radius:20px;
+				overflow: hidden;
+				position: relative;
+				cursor: pointer;
+			}
+			.section-6>.div-2>ul>li>img:hover{
+				transform:scale(1.05);
+				transition: all 1s; 
+			}
+			.section-6>.div-2>ul>li>img{
+				width:348px;
+				height: 220px;
+			}
+			
+			.section-6>.div-3{
+				width:1100px;
+				height: 60px;
+				margin-top: 20px;
+			}
+			.section-6>.div-3>ul>li{
+				width:348px;
+				height: 60px;
+				float: left;
+				position: relative;
+			}
+			.footer{
+				width: 1300px;
+				background: #322C27;
+				margin: 0 auto;
+				margin-top: 30px;
+			}
+			.footer>ul{
+				width: 1100px;
+				margin:0 auto;
+				padding: 50px 0px;
+			}
+			.footer>ul>li{
+				float: left;
+				color: white;
+			}
+			.footer>ul>li:nth-child(n+2){
+				margin-left:110px;
+			}
+			.footer>ul>li:nth-child(2)>p{
+				padding: 5px 0px;
+				font-size: 15px;
+			}
+			.footer>ul>li:nth-child(3)>p{
+				padding: 5px 0px;
+				font-size: 15px;
+			}
+			.footer>ul>li:nth-child(4)>p{
+				padding: 10px 0px;
+				font-size: 15px;
+			}
+			.footer>.p-1>span{
+				display: inline-block;
+				background:rgba(255,255,255,0.2);
+				color: white;
+				font-size: 15px;
+				padding: 10px 15px;
+				border-radius:5px ;
+				margin-left: 10px;
+				cursor: pointer;
+			}
+			.footer>.p-1>span:hover{
+				background:rgba(255,255,255,0.4);
+			}
+			.footer>.p-2{
+				color: darkgray;
+				font-size: 14px;
+				padding-top: 15px;
+			}
+			.footer>.p-2>span{
+				margin-left: 10px;
+				cursor: pointer;
+			}
+			.footer>.p-2>span:hover{
+				text-decoration:underline;
+			}
+			.footer>.footer-1{
+				width: 1100px;
+				margin: 0 auto;
+				text-align: center;
+				margin-top: 25px;
+				font-size: 13px;
+				color: darkgray;
+			}
+			.footer>.footer-1>p>img{
+				vertical-align: middle;
+			}
+			.fd{
+				position: fixed;
+				right: 33px;
+				bottom: 50px;
+				width: 40px;
+				overflow: hidden;
+				background: #333333;
+				border-radius:7px 7px  7px 7px ;
+			}
+			.fd>ul>li{
+				width:40px ;
+				height: 40px;
+				text-align: center;
+				cursor: pointer;
+			}
+			.fd>ul>li>img{
+				width: 80%;
+				height: 80%;
+			}
+			.fd>ul>li:nth-child(4){
+				margin-top: 10px;
+			}
+			.fd>ul>li:nth-child(1){
+				border-radius:10px 10px  0px 0px ;
+			}
+			.fhdb{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<header>
+				<ul class="lunbo">
+					<li><img src="img/lunbo-4.jpg"/></li>
+					<li><img src="img/lunbo-1.jpg"/></li>
+					<li><img src="img/lunbo-2.jpg"/></li>
+					<li><img src="img/lunbo-3.jpg"/></li>
+					<li><img src="img/lunbo-4.jpg"/></li>
+				</ul>
+				<div class="left-1"><b>&lt;</b></div>
+				<div class="right-1"><b>&gt;</b></div>
+				<ul class="dian">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<nav>
+					<div class="left"><img src="img/logo.png"/></div>
+					<div class="right">
+						<ul>
+							<li>客服热线
+								<ul style="background: white;border-radius:10px;color: black;line-height: 30px;">
+									<li style="position: absolute;background: white;color: black;border-radius:20px;padding: 0px 20px;margin-left: -30px;">400-400-0</li>
+								</ul>
+							</li>
+							<li>下载APP送500元大礼包&nbsp;V
+								<ul>
+									<li style="position: absolute;background: white;color: gray;margin-left: -50px;border-radius:10px ;">
+										<div style="float: left;margin-left: 10px;">
+											<p>扫码下载APP</p>
+											<img src="img/app.jpg"style="width: 100px;height: 100px;"/>
+											<p>注册立送500元大礼包</p>
+										</div>
+										<div style="float: right;margin-right: 30px;">
+											<p>扫码快速预定</p>
+											<img src="img/JJ8GRMND8SDJCP267PTG7BW8S3AV5T.jpg"style="width: 100px;height: 100px;"/>
+											<p>&nbsp;蚂蚁短租小程序</p>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>商旅合作</li>
+							<li>帮助中心
+								<ul style="background: white;color: gray;border-radius:10px;padding: 0px 20px; text-align: left;position: absolute;margin-left: -20px;">
+									<li>搜索房源</li>
+									<li>预定房源</li>
+									<li>订单操作</li>
+									<li>入住评论</li>
+									<li>更多</li>
+								</ul>
+							</li>
+							<li style="border: 2px solid white; text-align: center;border-radius:20px;line-height: 30px;padding: 0px 25px;margin-top: 3px;"><a href="#"style="color: white;">登陆/注册</a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="bo">
+					<p>
+						<ul>
+							<li>国内
+								<p style="width: 1020px; height: 50px;background: lightgray; border-radius:30px;position: absolute;margin-top: 20px;"class="gn">
+									<input type="text"size="13" placeholder="城市，景点，商圈" style="margin-left: 20px;"id="cs"/>
+									<span style="display: inline-block; width: 1px;height: 30px; border-left:1px solid gray;position: absolute;top: 10px;"></span>
+									<span>&nbsp;&nbsp;入住日期：</span>
+									<input size=2 id=SY2 value="2019">年
+									<input size=1 id=SM2 value="03">月
+									<input size=1 id=SD2 value="26">日
+									<span style="display: inline-block; width: 1px;height: 30px; border-left:1px solid gray;position: absolute;top: 10px;"></span>
+									<span>&nbsp;&nbsp;退房日期：</span>
+									<input size=2 id=SY3  value="2019" >年
+									<input size=1 id=SM3 value="03">月
+									<input size=1 id=SD3 value="27">日
+									<span style="display: inline-block; width: 1px;height: 30px; border-left:1px solid gray;position: absolute;top: 10px;"></span>
+									<span id="dj">&nbsp;点击</span>
+									<span id=result2 style="width: 30px;height: 30px;display: inline-block; font-size: 13px;">&nbsp;</span>天
+									<select name="">
+										<option value="不限">不限</option>
+										<option value="1人">1人</option>
+										<option value="2人">2人</option>
+									</select>
+								</p>
+								<ul style="position: absolute;top: 120px;z-index: 99;border-radius: 10px;box-shadow:0px 3px 14px darkgray; background: white;width: 400px;height: 280px; border-bottom:2px solid darkgray ;"class="rm">
+									<span style="position: absolute;top: 15px;right: 7px;"id="xx">X&nbsp;</span>
+									<li>热门城市
+										<ul>
+											<li>北京</li>
+											<li>上海</li>
+											<li>杭州</li>
+											<li>广州</li>
+											<li>厦门</li>
+											<li>深圳</li>
+											<li>武汉</li>
+											<li>郑州</li>
+											<li>珠海</li>
+											<li>香港</li>
+											<li>昆明</li>
+											<li>广西</li>
+											<li>云南</li>
+											<li>四川</li>
+											<li>重庆</li>
+											<li>周口</li>
+											<li>漯河</li>
+											<li>濮阳</li>
+											<li>澳门</li>
+											<li>台湾</li>
+											<li>珠江</li>
+											<li>贵州</li>
+											<li>苏州</li>
+											<li>昆山</li>
+											<li>东莞</li>
+										</ul>
+									</li>
+									<li>ABCD
+										<ul style="display: none;position: absolute;left: 20px;">
+											<li style="color: #228B22;">A</li>
+											<li>鞍山</li>
+											<li>安阳</li>
+											<li>澳门</li>
+											<li>安顺</li>
+											<li>&nbsp;</li>
+											<li>&nbsp;</li>
+											<li style="color: #228B22;">B</li>
+											<li>北京</li>
+											<li>北海</li>
+											<li>保定</li>
+											<li>包头</li>
+											<li>白山</li>
+											<li style="color: #228B22;">C</li>
+											<li>成都</li>
+											<li>重庆</li>
+											<li>长沙</li>
+											<li>长春</li>
+											<li>&nbsp;</li>
+											<li>&nbsp;</li>
+											<li style="color: #228B22;">D</li>
+											<li>大兴安岭</li>
+											<li>大连</li>
+											<li>打理</li>
+											<li>东莞</li>
+											<li>德州</li>
+										</ul>
+									</li>
+									<li>EFGH
+										<ul style="display: none;position: absolute;left: 20px;">
+											<li style="color: #228B22;">E</li>
+											<li>洱海</li>
+											<li>峨眉山</li>
+											<li>鄂尔多斯</li>
+											<li>鄂州</li>
+											<li>&nbsp;</li>
+											<li style="color: #228B22;">F</li>
+											<li>福州</li>
+											<li>佛山</li>
+											<li>阜阳</li>
+											<li>福州</li>
+											<li>阜新</li>
+											<li>&nbsp;</li>
+											<li style="color: #228B22;">G</li>
+											<li>广州</li>
+											<li>贵阳</li>
+											<li>桂林</li>
+											<li>贵港</li>
+											<li>&nbsp;</li>
+											<li>&nbsp;</li>
+											<li style="color: #228B22;">H</li>
+											<li>杭州</li>
+											<li>哈尔滨</li>
+											<li>海口</li>
+											<li>横店</li>
+											<li>衡水</li>
+											<li>淮安</li>
+											<li>红河</li>
+											<li>菏泽</li>
+										</ul>
+									</li>
+									<li>JKLM
+										<ul style="display: none;position: absolute;left: 20px;">
+											<li style="color: #228B22;">J</li>
+											<li>济南</li>
+											<li>嘉义</li>
+											<li>金门</li>
+											<li>吉林</li>
+											<li>济源</li>
+											<li>&nbsp;</li>
+											<li style="color: #228B22;">K</li>
+											<li>昆明</li>
+											<li>开封</li>
+											<li>克拉玛依</li>
+											<li>库尔勒</li>
+											<li>&nbsp;</li>
+											<li style="color: #228B22;">L</li>
+											<li>丽江</li>
+											<li>兰州</li>
+											<li>洛阳</li>
+											<li>拉萨</li>
+											<li>丽水</li>
+											<li style="color: #228B22;">M</li>
+											<li>绵阳</li>
+											<li>马鞍山</li>
+											<li>茂名</li>
+											<li>马祖</li>
+											<li>苗栗</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>海外
+								<p style="width: 1020px; height: 50px;position: absolute;left: 40px;display: none; background: lightgray; border-radius:30px;position: absolute;margin-top: 20px;"class="gn">
+									<input type="text"size="13"placeholder="城市" style="margin-left: 30px;"/>
+									<span style="display: inline-block; width: 1px;height: 30px; border-left:1px solid gray;position: absolute;top: 10px;"></span>
+									<span>&nbsp;&nbsp;入住日期：</span>
+									<input size=2 id=SY2 placeholder="--">年
+									<input size=1 id=SM2 placeholder="--">月
+									<input size=1 id=SD2 placeholder="--">日
+									<span style="display: inline-block; width: 1px;height: 30px; border-left:1px solid gray;position: absolute;top: 10px;"></span>
+									<span>&nbsp;&nbsp;退房日期：</span>
+									<input size=2 id=SY3  placeholder="--" >年
+									<input size=1 id=SM3 placeholder="--">月
+									<input size=1 id=SD3 placeholder="--">日
+									<span style="display: inline-block; width: 1px;height: 30px; border-left:1px solid gray;position: absolute;top: 10px;"></span>
+									<span id="dj">点击</span>
+									<span id=result2 style="width: 30px;height: 30px;display: inline-block; font-size: 13px;">&nbsp;</span>天
+									<select name="">
+										<option value="不限">不限</option>
+										<option value="1人">1人</option>
+										<option value="2人">2人</option>
+									</select>
+								</p>
+							</li>
+						</ul>
+					</p>
+				</div>
+			</header>
+			<div id="left-t"><img src="img/CGTYEY9X7YRB286NQCF697UXV4YEYX.jpg"/></div>
+			<div class="section-1">
+				<div class="div-1">
+					<div class="left"><img src="img/27104046.png"/></div>
+					<div class="right"><span class="span-1">旅行，就要住民宿</span>
+					<br />
+					<span class="span-2">谈笑有鸿儒，往来无白丁</span>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="div-2">
+					<ul>
+						<li class="li-1"style="position: relative;"><img src="img/houses.jpg"/>
+							<span style="position: absolute;display: inline-block;width: 100px;height: 50px;bottom: 0px;font-weight:bold;line-height: 50px;background: gainsboro;font-size: 19px;border-radius:0px 50px 0px 10px;">&nbsp;&nbsp;&nbsp;&nbsp;居民</span>
+						</li>
+						<li class="li-2"style="margin-top: 20px;position: relative;"><img src="img/oldhouse.jpg"/>
+							<span style="position: absolute;display: inline-block;bottom: 0px; width: 120px;height: 50px;font-weight:bold;line-height: 50px;background: gainsboro;font-size: 19px;border-radius:0px 50px 0px 10px;">&nbsp;&nbsp;&nbsp;&nbsp;老洋房</span>
+						</li>
+						<li class="li-3"style="position: relative;left:25px;top: 20px;"><img src="img/seaview.jpg"/>
+							<span style=" position: absolute;display: inline-block;width: 120px;height: 50px;bottom: 0px;font-weight:bold;line-height: 50px;background: gainsboro;font-size: 19px;border-radius:0px 50px 0px 10px;">&nbsp;&nbsp;&nbsp;&nbsp;海景房</span>
+						</li>
+					</ul>
+				</div>
+				<div class="div-3">
+					<ul>
+						<li class="li-2"style="position: relative;"><img src="img/inn.jpg"/>
+							<span style="position: absolute;display: inline-block;width: 120px;height: 50px;bottom: 0px;font-weight:bold;line-height: 50px;background: gainsboro;font-size: 19px;border-radius:0px 50px 0px 10px;">&nbsp;&nbsp;&nbsp;&nbsp;客栈</span>
+						</li>
+						<li class="li-3" style="position: relative;left: 20px;"><img src="img/villa.jpg"/>
+							<span style="position: absolute;display: inline-block; width: 120px;height: 50px;bottom:0px;font-weight:bold;line-height: 50px;background: gainsboro;font-size: 19px;border-radius:0px 50px 0px 10px;">&nbsp;&nbsp;&nbsp;&nbsp;别墅</span>
+						</li>
+						<li class="li-1" style="position: relative;top: 20px;"><img src="img/apartment.jpg"/>
+							<span style="position: absolute;display: inline-block;width: 100px;height: 50px;bottom: 0px;font-weight:bold;line-height: 50px;background: gainsboro;font-size: 19px;border-radius:0px 50px 0px 10px;">&nbsp;&nbsp;&nbsp;&nbsp;公寓</span>
+						</li>
+					</ul>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<div class="section-2">
+				<div class="div-1">
+					<div class="left"><img src="img/0327170433.png"/></div>
+					<div class="right"><span class="span-1">旅行主题推荐</span>
+					<br />
+					<span class="span-2">有一种旅行，叫跋山涉水来睡你</span>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="div-2">
+					<ul>
+						<li class="li-1"><img src="img/family.jpg"/></li>
+					</ul>
+				</div>
+				<div class="div-3">
+					<ul>
+						<li class="li-2"><img src="img/business.jpg"/></li>
+						<li class="li-3"style="margin-left: 20px;"><img src="img/party.jpg"/></li>
+						<li class="li-2"style="margin-top: 13px;"><img src="img/weekmonth.jpg"/></li>
+						<li class="li-3"style="margin-left:20px;margin-top: 13px;"><img src="img/discount.jpg"/></li>
+					</ul>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<div class="section-3">
+				<div class="div-1">
+					<div class="left"><img src="img/90327172820.png"/></div>
+					<div class="right"><span class="span-1">热门目的地</span>
+					<br />
+					<span class="span-2">灵魂和身体，总有一个在路上</span>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="div-2">
+					<ul>
+						<li><img src="img/r-1.jpg"/>
+							<p>&nbsp;&nbsp;<b style="font-weight: bold;font-size: 18px;">三亚</b>·44900+家住宿</p>
+						</li>
+						<li><img src="img/r-2.jpg"/>
+							<p>&nbsp;&nbsp;<b style="font-weight: bold;font-size: 18px;">北京</b>·28600+家住宿</p>
+						</li>
+						<li><img src="img/r-3.jpg"/>
+							<p>&nbsp;&nbsp;<b style="font-weight: bold;font-size: 18px;">上海</b>·27200+家住宿</p>
+						</li>
+						<li><img src="img/r-4.jpg"/>
+							<p>&nbsp;&nbsp;<b style="font-weight: bold;font-size: 18px;">香港</b>·3700+家住宿</p>
+						</li>
+						<li><img src="img/r-5.jpg"/>
+							<p>&nbsp;&nbsp;<b style="font-weight: bold;font-size: 18px;">大阪</b>·21100+家住宿</p>
+						</li>
+						<li><img src="img/r-6.jpg"/>
+							<p>&nbsp;&nbsp;<b style="font-weight: bold;font-size: 18px;">厦门</b>·2400+家住宿</p>
+						</li>
+					</ul>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<div class="section-4">
+				<ul>
+					<li>
+						<img src="img/l-1.png"/>
+						<p>真实房源</p>
+						<p>上门实拍资质备案</p>
+					</li>
+					<li>
+						<img src="img/l-2.png"/>
+						<p>安心入住</p>
+						<p>到店无房赔付</p>
+					</li>
+					<li>
+						<img src="img/l-3.png"/>
+						<p>芝麻信用</p>
+						<p>房东房客实名认证</p>
+					</li>
+					<li>
+						<img src="img/l-4.png"/>
+						<p>专业服务</p>
+						<p>7&nbsp;x&nbsp;24小时</p>
+					</li>
+					<div style="clear: both;"></div>
+				</ul>
+			</div>
+			<div class="section-5">
+				<ul>
+					<li><img src="img/lun-1.jpg"/></li>
+					<li><img src="img/lun-2.jpg"/></li>
+				</ul>
+				<div class="zuo">&lt;</div>
+				<div class="you">&gt;</div>
+				<div class="section-1">
+					<div class="left"> <h2>蚂蚁优选~点击切换</h2></div>
+					<div class="right"> <h2>京华浮梦~点击切换</h2></div>
+				</div>
+			</div>
+			<div class="section-6">
+				<div class="div-1">
+					<div class="left"><img src="img/27210319.png"/></div>
+					<div class="right"><span class="span-1">榆林暖冬-三亚</span>
+					<br />
+					<span class="span-2">碧海蓝天金作沙，椰风阵阵到天涯</span>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				<div class="div-2">
+					<ul>
+						<li class="li-1"><img src="img/33UHCDTSXXQHRLMLTRM7LLUY54T8HG.jpg_566x377c.jpg"/>
+							<span style="position: absolute;bottom: 0px;display: inline-block;width: 100px;height: 50px;line-height: 50px;text-align: center; color: white;font-weight:bold ;font-size:22px;background:rgba(25,25,25,0.6);border-radius:0px 10px 0px ;">￥238</span>
+						</li>
+						<li class="li-2"style="margin-left: 25px;"><img src="img/9PCR4YSF4P2HTX4WEBW6NXUM6SGXEP.jpg_566x377c.jpg"/>
+						<span style="position: absolute;bottom: 0px;display: inline-block;width: 100px;height: 50px;line-height: 50px;text-align: center; color: white;font-weight:bold ;font-size:22px;background:rgba(25,25,25,0.6);border-radius:0px 10px 0px ;">￥199</span></li>
+						<li class="li-3"style="margin-left: 25px;"><img src="img/77LDGPTYRYK2DKAFVV54PT82QMXQYR.jpg_566x377c.jpg"/>
+						<span style="position: absolute;bottom: 0px;display: inline-block;width: 100px;height: 50px;line-height: 50px;text-align: center; color: white;font-weight:bold ;font-size:22px;background:rgba(25,25,25,0.6);border-radius:0px 10px 0px ;">￥328</span></li>
+					</ul>
+				</div>
+				<div class="div-3">
+					<ul>
+						<li>
+							<p style="font-weight: bold;font-size: 19px;">江汉路步行街/地铁3分钟/一..</p>
+							<p style="margin-top: 7px;"> <span style="color:orange;">4.9分</span> <span style="color:orange;">超赞</span>·&nbsp;53条评价&nbsp;&nbsp;|&nbsp; 1居&nbsp; |&nbsp; 武汉</p>
+							<span style="display: inline-block;position: absolute;right: 5px;top: 2px; width: 50px;height:50px;border-radius:50% ; overflow: hidden;background: url(img/CZDNFLBHBK3SEBSV8BD8XW6D665B7N.jpg_90x90c.jpg)no-repeat;background-size:100%;"></span>
+						</li>
+						<li style="margin-left: 25px;">
+							<p style="font-weight: bold;font-size: 19px;">[留宿·小薄荷]北欧清新阳..</p>
+							<p style="margin-top: 7px;"> <span style="color:orange;">5.6分</span> <span style="color:orange;">完美！</span>·&nbsp;20条评价&nbsp;&nbsp;|&nbsp; 1居&nbsp; |&nbsp; 武汉</p>
+							<span style="display: inline-block;position: absolute;right: 5px;top: 2px; width: 50px;height:50px;border-radius:50% ; overflow: hidden;background: url(img/6LKR3E9QXX2XAXKHEBA7VS6XS4BKRE.jpg_90x90c.jpg)no-repeat;background-size:100%;"></span>
+						</li>
+						<li style="margin-left: 25px;">
+							<p style="font-weight: bold;font-size: 19px;">昙花林黄鹤楼户部港大赏樱..</p>
+							<p style="margin-top: 7px;"> <span style="color:orange;">5.0分</span> <span style="color:orange;">完美！</span>·&nbsp;40条评价&nbsp;&nbsp;|&nbsp; 2居&nbsp; |&nbsp; 武汉</p>
+							<span style="display: inline-block;position: absolute;right: 5px;top: 2px; width: 50px;height:50px;border-radius:50% ; overflow: hidden;background: url(img/4G3HJVA9PX8H8X6S6C5SVN3R26W7MX.jpg_90x90c.jpg)no-repeat;background-size:100%;"></span>
+						</li>
+					</ul>
+				</div>
+				<p style="background: gainsboro;margin: 0 auto;width: 200px; padding: 10px 10px;border-radius:25px;text-align: center;margin-top: 30px;">查看更多</p>
+				<div style="clear: both;"></div>
+			</div>
+			<div class="footer">
+				<ul>
+					<li>
+						<h3>联系我们</h3>
+						<p style="padding: 10px 0px;font-size: 16px;">客户服务</p>
+						<p style="padding: 5px 0px;font-size: 23px;">000-000-000</p>
+						<p style="font-size: 16px;">Email:1350521715@qq.com</p>
+						<p style="padding: 20px 0px;">商务合作</p>
+						<p>QQ:1350521715</p>
+						<p style="padding: 5px 0px;">Email:1350521715@qq.com</p>
+					</li>
+					<li>
+						<h3 style="padding-bottom:10px ;">帮助中心</h3>
+						<p>房源审核规范</p>
+						<p>房客安心计划</p>
+						<p>优质住宿计划</p>
+						<p>网站地图</p>
+						<p>房客帮助</p>
+					</li>
+					<li>
+						<h3 style="padding-bottom:10px ;">公司信息</h3>
+						<p>关于蚂蚁</p>
+						<p>加入我们</p>
+						<p>战略合作</p>
+						<p>媒体报道</p>
+						<p>服务协议</p>
+						<p>隐私政策</p>
+						<p>免费声明</p>
+					</li>
+					<li>
+						<h3 style="text-align: center;">下载APP</h3>
+						<p style="color: red;">注册立送500元大礼包</p>
+						<p><img src="img/ZYJA (1).jpg"/></p>
+						<p style="border: 1px solid white;text-align: center;padding: 5px 10px;width: 90px;font-size: 15px;">Android下载</p>
+						<p style="border: 1px solid white;text-align: center;padding: 5px 10px;margin-top: 10px; width: 90px;font-size: 15px;">iOS下载</p>
+					</li>
+					<li>
+						<h3>关注我们</h3>
+						<img src="img/weixin_logo.png" style="padding: 20px 5px;"/>
+						<img src="img/xinlang_logo.png"style="padding: 20px 5px;"/>
+					</li>
+					<div style="clear: both;"></div>
+				</ul>
+				<p class="p-1" style="width: 1100px;margin: 0 auto;"><span>热门城市</span><span>网站导航</span><span>友情链接</span><span>手机版</span></p>
+				<p class="p-2" style="width: 1100px;margin: 0 auto;"><span>青岛日租房</span><span>北京日租房</span><span>秦皇岛日租房</span><span>厦门日租房</span><span>大连日租房</span><span>上海日租房</span><span>成都日租房</span><span>威海日租房</span><span>重庆日租房</span><span>西安日租房</span><span>杭州日租房</span><span>烟台日租房</span><span>三亚日租房</span></p>
+				<p class="p-2" style="width: 1100px;margin: 0 auto;"><span>青岛日租房</span><span>北京日租房</span><span>秦皇岛日租房</span><span>厦门日租房</span><span>大连日租房</span><span>上海日租房</span><span>成都日租房</span><span>威海日租房</span><span>重庆日租房</span><span>西安日租房</span><span>杭州日租房</span><span>烟台日租房</span><span>三亚日租房</span></p>
+				<p class="p-2" style="width: 1100px;margin: 0 auto;"><span>青岛日租房</span><span>北京日租房</span><span>秦皇岛日租房</span><span>厦门日租房</span><span>大连日租房</span><span>上海日租房</span><span>成都日租房</span><span>威海日租房</span><span>重庆日租房</span><span>西安日租房</span><span>杭州日租房</span><span>烟台日租房</span><span>三亚日租房</span></p>
+				<p class="p-3" style="width: 1100px;margin: 0 auto;"> <marquee behavior="" direction=""style="color: darkgray;font-size: 14px;margin-top: 20px;">东阁8号落地窗10分钟前被****...入住  地铁光都站大床房57分钟前被用户180****999 伶包入住 简约风格双人床10分钟前被刘先生预定  东阁1号线直达国贸50分钟前被***入住</marquee></p>
+				<div class="footer-1">
+					<p style="line-height:25px;">客户服务: 000-000-000 | 用户答疑 | 公司信息 | 网站地图 | 短租房 | app下载 | 关注我们  <img src="img/weixin_logo_s.png"/>&nbsp;&nbsp;<img src="img/xinlang_logo_s.png"/></p>
+					<p>网站备案/许可证号：京ICP证13002号 营业执照编号：10258576 易云游网络技术(北京)有限公司</p>
+					<p style="margin-top: 10px;"><img src="img/739.png"/> 京公网安备 11010802022号</p>
+					<p style="margin-top: 10px;padding-bottom: 30px;"><img src="img/740.png"/><img src="img/741.png" style="margin-left: 20px;"/><img src="img/742.png"style="margin-left: 20px;"/></p>
+				</div>
+			</div>
+			<div class="fd">
+				<ul>
+					<li><img src="img/417.png"style="margin-top: 5px;"/></li>
+					<li><img src="img/416.png"/></li>
+					<li><img src="img/415.png"/></li>
+					<li class="fhdb"><img src="img/414.png"/></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			var a=0;
+			function fa(){
+				a++;
+				a=a>3?0:a;
+				$(".lunbo>li").eq(a).fadeIn(1500).siblings().fadeOut(1500);
+				$(".dian>li").eq(a).addClass("in").siblings().removeClass("in");
+			}
+			var time= setInterval(fa,3000);
+			$("header").hover(function(){
+				clearInterval(time);
+				$("header>.left-1,.right-1").show();
+			},function(){
+				time= setInterval(fa,3000);
+				$("header>.left-1,.right-1").hide();
+			})
+			$("header>.left-1").click(function(){
+				a--;
+				a=a<0?3:a;
+				$(".lunbo>li").eq(a).fadeIn(1500).siblings().fadeOut(1500);
+				$(".dian>li").eq(a).addClass("in").siblings().removeClass("in");
+			})
+			$("header>.right-1").click(function(){
+				fa();
+			})
+			$("header>.dian>li").eq(0).addClass('in');
+			$(".dian>li").click(function(){
+				a=$(this).index();
+				$(".lunbo>li").eq(a).fadeIn(1500).siblings().fadeOut(1500);
+				$(".dian>li").eq(a).addClass("in").siblings().removeClass("in");
+			})
+			$("nav>.right>ul>li:nth-child(5)").hover(function(){
+				$(this).css("background",'white').children('a').css("color","gray");
+			},function(){
+				$(this).css("background",'').children('a').css("color","white")
+			})
+			$(".bo>ul>li").eq(0).addClass("a1");
+			
+			$("#dj").click(function(){
+					y2=document.getElementById("SY2").value;
+					m2=document.getElementById("SM2").value;
+					d2=document.getElementById("SD2").value;
+					
+					
+					y3=document.getElementById("SY3").value;
+					m3=document.getElementById("SM3").value;
+					d3=document.getElementById("SD3").value;
+					
+					
+					day2=new Date(y2,m2-1,d2);
+					day3=new Date(y3,m3-1,d3);
+					
+					document.getElementById("result2").innerHTML=(day3-day2)/86400000;
+			})
+			$(".bo>ul>li").click(function(){
+				$(this).addClass("a1").children('p').show().parent().siblings().removeClass('a1').children('p').hide();
+			})
+			$(".rm>li").eq(0).addClass("a2");
+			$(".rm>li").click(function(){
+				$(this).addClass("a2").children("ul").show().parent().siblings().removeClass('a2').children().hide();
+			})
+			$(".gn>#cs").focus(function(){
+				$(".rm").show();
+			})
+			$("#xx").click(function(){
+				$(".rm").hide();
+			})
+			var ab=0;
+			var time= setInterval(ffa,2000);
+			$(".section-5>.section-1>.left>h2").addClass("a3");
+			function pd(){
+				if(ab==0){
+					$(".section-5>.section-1>.right>h2").removeClass("a3");
+					$(".section-5>.section-1>.left>h2").addClass("a3");
+				}
+				if(ab==1){
+					$(".section-5>.section-1>.right>h2").addClass("a3");
+					$(".section-5>.section-1>.left>h2").removeClass("a3");
+				}
+			}
+			function ffa(){
+				ab++;
+				ab=ab>1?0:ab;
+				pd();
+				$(".section-5>ul").stop().animate({"margin-left":-1100*ab+"px"});
+			}
+			$(".section-5").hover(function(){
+				clearInterval(time);
+				$(".section-5>.zuo").show();
+				$(".section-5>.you").show();
+			},function(){
+				time= setInterval(ffa,2000);
+				$(".section-5>.zuo").hide();
+				$(".section-5>.you").hide();
+			})
+			$(".section-5>.section-1>.left>h2").click(function(){
+				ab=$(this).index();
+				pd();
+				$(".section-5>ul").eq(ab).stop().animate({"margin-left":-1100*ab+"px"});
+			})
+			$(".section-5>.section-1>.right>h2").click(function(){
+				ab=1;
+				if(ab=1){
+					$(".section-5>.section-1>.right>h2").addClass("a3");
+					$(".section-5>.section-1>.left>h2").removeClass("a3");
+				}
+				$(".section-5>ul").stop().animate({"margin-left":-1100*ab+"px"});
+			})
+			$(".section-5>.you").click(function(){
+				ffa();
+			})
+			$(".section-5>.zuo").click(function(){
+				ab--;
+				ab=ab<0?1:ab;
+				if(ab==0){
+					$(".section-5>.section-1>.right>h2").removeClass("a3");
+					$(".section-5>.section-1>.left>h2").addClass("a3");
+				}
+				if(ab==1){
+					$(".section-5>.section-1>.right>h2").addClass("a3");
+					$(".section-5>.section-1>.left>h2").removeClass("a3");
+				}
+				$(".section-5>ul").stop().animate({"margin-left":-1100*ab+"px"});
+			})
+			$(".fhdb").click(function(){
+				$("html,body").animate({scrollTop: 0},800)
+			})
+			$(window).scroll(function(){
+				if($(this).scrollTop()>600){
+					$(".fhdb").slideDown();
+				}else{
+					$(".fhdb").slideUp();
+				}
+			})
+		})
+	</script>
+</html>
